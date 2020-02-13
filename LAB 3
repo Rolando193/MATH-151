@@ -61,5 +61,5 @@ for i in range(len(num)):
         
 ###3B###
 f= (((2*x**2)+1)**(1/2))/(3*x-5)
-print(limit(f,x,oo))
-print(limit(f,x,-oo))
+print("Limit of f @ infinity:",limit(f,x,oo))
+print("Limit of f @ negative infinity",limit(f,x,-oo))
