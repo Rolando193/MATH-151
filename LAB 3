@@ -47,10 +47,11 @@ f3 = ((x**2)-(7*x)+12)/(x-3)
 f4 = pi 
 plot((f1, (x,0,2)),(f2, (x,2,3)),(f3, (x,3,4)),(f4,(x,4,6)))
 
-#### 3 ####
+#### 3 A & B####
 from sympy import *
 from sympy.plotting import (plot, plot_parametric,plot3d_parametric_surface, plot3d_parametric_line,plot3d)
 x=symbols('x')
+######### A #########
 f = (((2*x**2)+1)**(1/2))/(3*x-5)
 num = [10,100,1000,10000,-10,-100,-1000,-10000]
 for i in range(len(num)):
@@ -58,9 +59,7 @@ for i in range(len(num)):
         print("f(",num[i],")=:",limit(f,x,num[i]))
     elif num[i]<0: 
         print("f(",num[i],")=:",limit(f,x,num[i]))
-        
-###3B###
-f= (((2*x**2)+1)**(1/2))/(3*x-5)
+######## B ########
 print("Limit of f @ infinity:",limit(f,x,oo))
 print("Limit of f @ negative infinity:",limit(f,x,-oo))
 
