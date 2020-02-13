@@ -1,0 +1,50 @@
+LAB 3 
+#### QUESTION 1 #####
+from sympy import *
+from sympy.plotting import (plot, plot_parametric,plot3d_parametric_surface, plot3d_parametric_line,plot3d)
+from math import pi
+
+x=symbols('x')
+g= 5 + (x**2)*cos(pi/x**2)
+print("A)Limit as x--> 0 of g(x) is:",limit(g,x,0))
+####### B ########
+f = -x**2+5
+h = x**2+5
+print("B) Functions that satisfy Squeeze Theorem:")
+plot((f, (x,-0.5,0.5)),(g, (x,-0.5,0.5)),(h, (x,-0.5,0.5)))
+
+#### 2 A) ####
+from sympy import *
+from sympy.plotting import (plot, plot_parametric,plot3d_parametric_surface, plot3d_parametric_line,plot3d)
+from math import pi
+x=symbols('x')
+
+f1 = 2*x-(x**2)
+f2 = 2-x
+f3 = ((x**2)-(7*x)+12)/(x-3)
+f4 = pi 
+print("F1 limit @ x=0:",limit(f1,x,0))
+print("F1 limit @ x=2:",limit(f1,x,2))
+print("F2 limit @ x=2;",limit(f2,x,2))
+print("F2 limit @ x=3;",limit(f2,x,3))
+print("F3 limit @ x=3;",limit(f3,x,3))
+print("F3 limit @ x=4;",limit(f3,x,4))
+print("F4 limit @ x=4;",limit(f4,x,4))
+print("")
+print("Since the limit of F1 @ x=2 is:",limit(f1,x,2),"and the limit of F2 @ x=2 is:",limit(f2,x,2),"then f(x) is continuous @ x=2")
+print("Since the limit of F2 @ x=3 is:",limit(f2,x,3),"and the limit of F3 @ x=3 is:",limit(f3,x,3),"then f(x) is continuous @ x=3")
+print("Since the limit of F3 @ x=4 is:",limit(f3,x,4),"and the limit of F4 @ x=4 is:",limit(f4,x,4),"then f(x) is not continuous @ x=4")
+print("but f(x) at x=4 is continous on the right side.")
+
+#### 2 B) ####
+from sympy import *
+from sympy.plotting import (plot, plot_parametric,plot3d_parametric_surface, plot3d_parametric_line,plot3d)
+from math import pi
+x=symbols('x')
+f1 = 2*x-(x**2)
+f2 = 2-x
+f3 = ((x**2)-(7*x)+12)/(x-3)
+f4 = pi 
+plot((f1, (x,0,2)),(f2, (x,2,3)),(f3, (x,3,4)),(f4,(x,4,6)))
+
+
