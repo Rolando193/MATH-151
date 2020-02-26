@@ -30,3 +30,32 @@ print("The nth derivative formula for g(x)=", g1, "is: ((x**2)+(2*n*x)+(n*(n-1))
 n= 10
 der= ((x**2)+(2*n*x)+(n*(n-1)))*E**x
 print('The 10th Derivative of g(x)=', g1, 'is:', der)
+########## QUESTION 4 ##############
+from sympy import *
+from sympy.plotting import (plot, plot_parametric,plot3d_parametric_surface, plot3d_parametric_line,plot3d)
+from math import pi
+x= symbols('x')
+########### A ##############
+f = (1-tan(x))/(sin(x)-cos(x))### ESTIMATING LIMIT WITH GRAPH
+plot((f,(x,0,1)))
+#print(pi/4)
+print("The limit as x @ pi/4 is approximatly",-1.4,"based on the graph")
+############ B #############
+list_l = [.78,.785,.7853]
+list_r = [.79,.786,.7854]
+for i in range(len(list_l)):## LIST TO SOLVE FOR LIMIT AT DIFFERENT POINTS
+    a = limit(f,x,list_l[i])
+    print("The limit of F @ pi/4 from the left is",a)
+for i in range(len(list_r)):
+    b = limit(f,x,list_r[i])
+    print("The limit of F @ pi/4 from the right is",b)
+############ C ############
+lim = limit(f,x,pi/4)
+print("THE EXACT LIMIT OF F @ pi/4i is",lim)
+############# D ###########
+num = 1-(sin(x)/cos(x))
+den = sin(x)-cos(x)
+F = num / den
+limF = limit(F,x,pi/4)
+print("LIMIT OF F @ pi/4 is",lim)
+print("LIMIT OF F @ pi/4 with substitution is",limF)
