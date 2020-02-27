@@ -20,3 +20,8 @@ ddy = diff(dy,x)
 eq3= ddy + 6*dy + 13*y
 sol3 = solve(eq3,x)
 print(sol3)
+######## 2A #######
+x, y = symbols('x y')
+D = x**3 + y**3 -3*x*y
+dD = diff(D,x)
+print("The derivative of ",D," is ",dD)
