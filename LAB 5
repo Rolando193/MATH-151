@@ -25,3 +25,5 @@ x, y = symbols('x y')
 D = x**3 + y**3 -3*x*y
 dD = diff(D,x)
 print("The derivative of ",D," is ",dD)
+######## 2C ########
+P1 = plot_implicit(D,(x,-5,5))
