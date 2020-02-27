@@ -13,6 +13,7 @@ print(sol)
 eq2= ddy + 6*dy + 13* y
 sol2 = solve(eq2,r)
 print(sol2)
+######### C ########
 y = exp(-3*x)*(cos(2*x)+sin(2*x))
 dy = diff(y,x)
 ddy = diff(dy,x)
