@@ -1,1 +1,21 @@
 ### LAB ###
+##### QUESTION 1 #####
+from sympy import *
+######### A ########
+r,x=symbols('r x')
+y = exp(r*x)
+dy = diff(y,x)
+ddy = diff(dy,x)
+eq = ddy + 5*dy + 6*y
+sol = solve(eq,r)
+print(sol)
+######### B ########
+eq2= ddy + 6*dy + 13* y
+sol2 = solve(eq2,r)
+print(sol2)
+y = exp(-3*x)*(cos(2*x)+sin(2*x))
+dy = diff(y,x)
+ddy = diff(dy,x)
+eq3= ddy + 6*dy + 13*y
+sol3 = solve(eq3,x)
+print(sol3)
